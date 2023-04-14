@@ -62,8 +62,6 @@ function App() {
             if (profileObj) {
                 const response = await fetch(
                     "http://localhost:8080/api/v1/users",
-                    // "https://real-estate-3jg0.onrender.com/api/v1/users",
-                    // "https://api.vercel.com/v1/integrations/deploy/prj_kb7rbXU4BEbk32jMralVJIDQabuO/oOjPLtP9NN/api/v1/users",
                     {
                         method: "POST",
                         headers: { "Content-Type": "application/json" },
@@ -135,10 +133,6 @@ function App() {
             <RefineSnackbarProvider>
                 <Refine
                     dataProvider={dataProvider("http://localhost:8080/api/v1")}
-                    // dataProvider={dataProvider("https://real-e-state-new.netlify.app/api/v1")}
-
-
-                    // dataProvider={dataProvider("https://api.vercel.com/v1/integrations/deploy/prj_kb7rbXU4BEbk32jMralVJIDQabuO/oOjPLtP9NN/api/v1")}
                     notificationProvider={notificationProvider}
                     ReadyPage={ReadyPage}
                     catchAll={<ErrorComponent />}
